@@ -1,0 +1,61 @@
+# ======================================
+# 🌐 General
+# ======================================
+.DS_Store
+Thumbs.db
+node_modules/
+.env
+.env.local
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ======================================
+# 📁 Build & Cache
+# ======================================
+dist/
+build/
+.cache/
+tmp/
+temp/
+coverage/
+*.tmp
+
+# ======================================
+# 🖼️ IDE / OS / Editor
+# ======================================
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ======================================
+# 💾 Database / Backup
+# ======================================
+*.sqlite
+*.db
+*.sql
+*.dump
+
+# ======================================
+# 🧠 Environment specific
+# ======================================
+/server/node_modules/
+/server/.env
+/client/node_modules/
+/client/dist/
+/client/.cache/
+
+# ======================================
+# 🧩 Optional (if using tools)
+# ======================================
+# Logs
+logs/
+*.log
+# Mac
+.DS_Store
+# Windows
+Thumbs.db
+# Linux
+*~
