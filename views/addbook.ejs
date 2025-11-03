@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library</title>
+    <link rel="stylesheet" href="/styles/main.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul class="menu-list" id="menuList">
+          <li class="menu-item">
+            <a href="/" class="menu-link">Books</a>
+          </li>
+          <li class="menu-item">
+            <a href="/quotes" class="menu-link">Quotes</a>
+          </li>
+          <li class="menu-item">
+            <a href="/dashboard" class="menu-link">Dashboard</a>
+          </li>
+          <li class="menu-item">
+            <a href="/add" class="menu-link active">Add</a>
+          </li>
+          <li class="menu-item">
+            <a href="/profile" class="menu-link">Profile</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="add-main">
+      <div class="add-content">
+        <h2>
+          Add a New <span class="module active-add">Book</span> or
+          <span class="module change-quotes">Quotes</span>
+        </h2>
+        <p>Fill in the details to add a new item to your library.</p>
+
+        <form action="add-book" method="post" id="addBook">
+          <label for="b-title">Book Title</label><br />
+          <input type="text" name="title" placeholder="Exp : 1984" required />
+          <br />
+          <label for="b-title">Author</label><br />
+          <input
+            type="text"
+            name="author"
+            placeholder="Exp : George Orwel"
+            required
+          />
+          <br />
+          <label for="b-title">Book Cover </label><br />
+          <input type="url" name="url" placeholder="Exp : https://1984.jpg" />
+          <br />
+
+          <div class="book-status">
+            <span class="status-read">Completed</span>
+            <span class="status-wish">Want to Read</span>
+          </div>
+
+          <button class="btn">Add</button>
+        </form>
+
+        <form action="add-quotes" method="post" id="addQuote">
+          <label for="t-quotes">Quote</label><br />
+          <input
+            type="text"
+            name="title"
+            placeholder="Your quotes"
+            required
+          /><br />
+          <label for="a-quotes">Author</label><br />
+          <input
+            type="text"
+            name="author"
+            placeholder="Quotes author"
+            required
+          /><br />
+
+          <button class="btn">Add</button>
+        </form>
+      </div>
+    </div>
+    <script src="/js/logic.js"></script>
+  </body>
+</html>
