@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <link rel="stylesheet" href="/styles/login.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Register</h2>
+      <form action="/rForm" method="post">
+        <div class="input-group">
+          <label for="login-username">Username</label>
+          <input
+            type="text"
+            name="username"
+            id="userLogin"
+            placeholder="Pick up a cool username"
+            required
+          />
+        </div>
+        <div class="input-group">
+          <label for="login-username">Email</label>
+          <input
+            type="email"
+            name="email"
+            id="emailLogin"
+            placeholder="Add your email"
+            required
+          />
+        </div>
+        <div class="input-group">
+          <label for="login-username">Create Password</label>
+          <input
+            type="password"
+            name="password1"
+            id="passwordLogin"
+            placeholder="Choose a strong password"
+            required
+          />
+        </div>
+        <div class="input-group">
+          <label for="login-username">Confirm Password</label>
+          <input
+            type="password"
+            name="password2"
+            id="passwordLogin2"
+            placeholder="Confrim your password"
+            required
+          />
+        </div>
+        <div class="button">
+          <input type="submit" value="Register" />
+        </div>
+      </form>
+      <span>Already have one? <a href="/login">Log in instead</a></span>
+    </div>
+  </body>
+</html>

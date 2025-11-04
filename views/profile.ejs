@@ -11,7 +11,7 @@
       <nav>
         <ul class="menu-list" id="menuList">
           <li class="menu-item">
-            <a href="/" class="menu-link">Books</a>
+            <a href="/books" class="menu-link">Books</a>
           </li>
           <li class="menu-item">
             <a href="/quotes" class="menu-link">Quotes</a>
@@ -36,17 +36,14 @@
         <div class="profile-info-grid">
           <div class="info-item">
             <label>Username</label>
-            <p class="info-value">username123</p>
+            <p class="info-value"><%= locals.username %></p>
           </div>
           <div class="info-item">
             <label>Email</label>
-            <p class="info-value">user@example.com</p>
+            <p class="info-value"><%= locals.email %></p>
           </div>
         </div>
-      </div>
 
-      <div class="profile-box">
-        <h3 class="underline">Actions</h3>
         <div class="actions-content">
           <p>Manage your account</p>
           <button class="btn-signout">Sign Out</button>
