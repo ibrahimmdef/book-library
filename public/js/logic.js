@@ -53,3 +53,18 @@ bookStatus.forEach((item) => {
     }
   });
 });
+
+// Select all section links
+
+const sectionLinks = document.querySelectorAll(".sections a");
+
+sectionLinks.forEach((link) => {
+  link.addEventListener("click", (e) => {
+    // Remove 'active' from all links
+    sectionLinks.forEach((all) =>
+      all.querySelector("span").classList.remove("active")
+    );
+
+    link.querySelector("span").classList.add("active");
+  });
+});

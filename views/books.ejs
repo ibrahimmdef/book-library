@@ -43,157 +43,34 @@
           <img src="/images/search.svg.svg" alt="searchbutton" />
         </span>
       </div>
+
       <div class="sections">
-        <a href="/">
-          <span class="active">All</span>
+        <a href="/books">
+          <span class="<%= filter === 'all' ? 'active' : '' %>">All</span>
         </a>
         <a href="/read">
-          <span>Read</span>
+          <span class="<%= filter === 'read' ? 'active' : '' %>">Read</span>
         </a>
         <a href="/want">
-          <span>Want To Read</span>
+          <span class="<%= filter === 'want' ? 'active' : '' %>"
+            >Want To Read</span
+          >
         </a>
       </div>
+
       <div class="container all-books">
+        <% if (books.length === 0) { %>
+        <p>No books found.</p>
+        <% } else { %> <% books.forEach(book => { %>
         <div class="book">
           <div class="book-img-wrapper">
-            <img src="/images/landscape.svg" alt="landscape" />
-
-            <div class="menu-btn">⋮</div>
-
-            <div class="menu">
-              <button class="analyze-btn">AI Analyze</button>
-              <button class="delete-btn">Delete</button>
-            </div>
+            <img src="<%= book.cover_url %>" alt="<%= book.title %>" />
           </div>
-
-          <span class="book-title">White Nights</span>
-          <span class="book-author">F.M.Dostoyevski</span>
+          <span class="book-title"><%= book.title %></span>
+          <span class="book-author"><%= book.author %></span>
         </div>
-
-        <div class="book">
-          <div class="book-img-wrapper">
-            <img src="/images/landscape.svg" alt="landscape" />
-
-            <div class="menu-btn">⋮</div>
-
-            <div class="menu">
-              <button class="analyze-btn">AI Analyze</button>
-              <button class="delete-btn">Delete</button>
-            </div>
-          </div>
-
-          <span class="book-title">White Nights</span>
-          <span class="book-author">F.M.Dostoyevski</span>
-        </div>
-        <div class="book">
-          <div class="book-img-wrapper">
-            <img src="/images/landscape.svg" alt="landscape" />
-
-            <div class="menu-btn">⋮</div>
-
-            <div class="menu">
-              <button class="analyze-btn">AI Analyze</button>
-              <button class="delete-btn">Delete</button>
-            </div>
-          </div>
-
-          <span class="book-title">White Nights</span>
-          <span class="book-author">F.M.Dostoyevski</span>
-        </div>
-        <div class="book">
-          <div class="book-img-wrapper">
-            <img src="/images/landscape.svg" alt="landscape" />
-
-            <div class="menu-btn">⋮</div>
-
-            <div class="menu">
-              <button class="analyze-btn">AI Analyze</button>
-              <button class="delete-btn">Delete</button>
-            </div>
-          </div>
-
-          <span class="book-title">White Nights</span>
-          <span class="book-author">F.M.Dostoyevski</span>
-        </div>
-        <div class="book">
-          <div class="book-img-wrapper">
-            <img src="/images/landscape.svg" alt="landscape" />
-
-            <div class="menu-btn">⋮</div>
-
-            <div class="menu">
-              <button class="analyze-btn">AI Analyze</button>
-              <button class="delete-btn">Delete</button>
-            </div>
-          </div>
-
-          <span class="book-title">White Nights</span>
-          <span class="book-author">F.M.Dostoyevski</span>
-        </div>
-        <div class="book">
-          <div class="book-img-wrapper">
-            <img src="/images/landscape.svg" alt="landscape" />
-
-            <div class="menu-btn">⋮</div>
-
-            <div class="menu">
-              <button class="analyze-btn">AI Analyze</button>
-              <button class="delete-btn">Delete</button>
-            </div>
-          </div>
-
-          <span class="book-title">White Nights</span>
-          <span class="book-author">F.M.Dostoyevski</span>
-        </div>
-        <div class="book">
-          <div class="book-img-wrapper">
-            <img src="/images/landscape.svg" alt="landscape" />
-
-            <div class="menu-btn">⋮</div>
-
-            <div class="menu">
-              <button class="analyze-btn">AI Analyze</button>
-              <button class="delete-btn">Delete</button>
-            </div>
-          </div>
-
-          <span class="book-title">White Nights</span>
-          <span class="book-author">F.M.Dostoyevski</span>
-        </div>
-        <div class="book">
-          <div class="book-img-wrapper">
-            <img src="/images/landscape.svg" alt="landscape" />
-
-            <div class="menu-btn">⋮</div>
-
-            <div class="menu">
-              <button class="analyze-btn">AI Analyze</button>
-              <button class="delete-btn">Delete</button>
-            </div>
-          </div>
-
-          <span class="book-title">White Nights</span>
-          <span class="book-author">F.M.Dostoyevski</span>
-        </div>
-        <div class="book">
-          <div class="book-img-wrapper">
-            <img src="/images/landscape.svg" alt="landscape" />
-
-            <div class="menu-btn">⋮</div>
-
-            <div class="menu">
-              <button class="analyze-btn">AI Analyze</button>
-              <button class="delete-btn">Delete</button>
-            </div>
-          </div>
-
-          <span class="book-title">White Nights</span>
-          <span class="book-author">F.M.Dostoyevski</span>
-        </div>
+        <% }) %> <% } %>
       </div>
-      <div class="container reading"></div>
-      <div class="container wishlist"></div>
     </div>
     <script src="/js/logic.js"></script>
   </body>

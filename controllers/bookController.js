@@ -29,3 +29,26 @@ export const addBook = async (req, res) => {
     res.send("An error occurred.");
   }
 };
+
+export const getAllBooks = async (req, res) => {
+  const books = await db.query("SELECT * FROM books WHERE user_id = $1", [
+    req.session.user.id,
+  ]);
+  res.render("books.ejs", { books: books.rows, filter: "all" });
+};
+
+export const getReadBooks = async (req, res) => {
+  const books = await db.query(
+    "SELECT * FROM books WHERE user_id = $1 AND status = 'finished'",
+    [req.session.user.id]
+  );
+  res.render("books.ejs", { books: books.rows, filter: "read" });
+};
+
+export const getWantBooks = async (req, res) => {
+  const books = await db.query(
+    "SELECT * FROM books WHERE user_id = $1 AND status = 'want'",
+    [req.session.user.id]
+  );
+  res.render("books.ejs", { books: books.rows, filter: "want" });
+};

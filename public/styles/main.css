@@ -170,52 +170,6 @@ body {
   margin-bottom: 10px;
 }
 
-.menu-btn {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  font-size: 20px;
-  cursor: pointer;
-  background: rgba(0, 0, 0, 0.5);
-  color: #fff;
-  padding: 2px 6px;
-  border-radius: 8px;
-  opacity: 0;
-  transition: 0.2s;
-}
-
-.book-img-wrapper:hover .menu-btn {
-  opacity: 1;
-  transition: all 1s;
-}
-
-.menu {
-  position: absolute;
-  top: 35px;
-  right: 12px;
-  background: white;
-  border-radius: 10px;
-  padding: 8px;
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-
-.menu button {
-  background: none;
-  border: none;
-  padding: 6px 10px;
-  font-size: 14px;
-  cursor: pointer;
-  border-radius: 6px;
-  text-align: right;
-}
-
-.menu button:hover {
-  background: #f0f0f0;
-}
-
 .book .book-title {
   font-size: 0.9rem;
   font-style: italic;

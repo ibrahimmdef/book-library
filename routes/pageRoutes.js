@@ -1,8 +1,10 @@
+// routes/pageRoutes.js
 import express from "express";
+import { getDashboard } from "../controllers/pageController.js";
+
 const router = express.Router();
 
-router.get("/books", (req, res) => res.render("books.ejs"));
-router.get("/dashboard", (req, res) => res.render("dashboard.ejs"));
+router.get("/dashboard", getDashboard);
 router.get("/add", (req, res) => res.render("addbook.ejs"));
 
 export default router;
