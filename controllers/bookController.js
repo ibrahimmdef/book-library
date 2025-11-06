@@ -52,3 +52,15 @@ export const getWantBooks = async (req, res) => {
   );
   res.render("books.ejs", { books: books.rows, filter: "want" });
 };
+
+export const bookDelete = async (req, res) => {
+  const id = req.params.id;
+  db.query("DELETE FROM books WHERE id = $1", [id]);
+  res.redirect("/books");
+};
+
+export const bookFinish = async (req, res) => {
+  const id = req.params.id;
+  db.query("UPDATE books SET status='finished' WHERE id =$1", [id]);
+  res.redirect("/books");
+};

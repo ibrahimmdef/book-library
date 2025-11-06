@@ -93,3 +93,9 @@ export const registerUser = async (req, res) => {
     res.send("Error registering");
   }
 };
+
+export const logout = (req, res) => {
+  req.session.destroy(() => {
+    res.redirect("/login");
+  });
+};

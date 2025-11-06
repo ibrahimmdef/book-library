@@ -65,10 +65,27 @@
         <div class="book">
           <div class="book-img-wrapper">
             <img src="<%= book.cover_url %>" alt="<%= book.title %>" />
+
+            <!-- HOVER OVERLAY BUTTONS -->
+            <div class="hover-actions">
+              <form action="/books/delete/<%= book.id %>" method="POST">
+                <button class="delete-btn" type="submit">Delete</button>
+              </form>
+
+              <% if (book.status === 'want') { %>
+              <form action="/books/finish/<%= book.id %>" method="POST">
+                <button class="finish-btn" type="submit">
+                  Mark as Finished
+                </button>
+              </form>
+              <% } %>
+            </div>
           </div>
+
           <span class="book-title"><%= book.title %></span>
           <span class="book-author"><%= book.author %></span>
         </div>
+
         <% }) %> <% } %>
       </div>
     </div>
