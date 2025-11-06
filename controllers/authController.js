@@ -3,7 +3,6 @@ import db from "../db/index.js";
 
 const saltRounds = 10;
 
-// LOGIN PAGE
 export const loginPage = (req, res) => {
   if (req.session.user) {
     return res.redirect("/profile");
@@ -11,7 +10,6 @@ export const loginPage = (req, res) => {
   res.render("auth/login.ejs");
 };
 
-// REGISTER PAGE
 export const registerPage = (req, res) => {
   if (req.session.user) {
     return res.redirect("/profile");
@@ -19,7 +17,6 @@ export const registerPage = (req, res) => {
   res.render("auth/register.ejs");
 };
 
-// LOGIN USER
 export const loginUser = async (req, res) => {
   const emailOrUsername = req.body.username;
   const loginPassword = req.body.password;
@@ -55,7 +52,6 @@ export const loginUser = async (req, res) => {
   }
 };
 
-// REGISTER USER
 export const registerUser = async (req, res) => {
   const { username, email, password1, password2 } = req.body;
 

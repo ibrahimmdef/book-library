@@ -9,7 +9,7 @@ import {
 const router = express.Router();
 
 router.get("/login", loginPage);
-router.get("/register", registerPage);
+router.get("/", registerPage);
 
 router.post("/lForm", loginUser);
 router.post("/rForm", registerUser);

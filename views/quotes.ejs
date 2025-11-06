@@ -28,53 +28,19 @@
         </ul>
       </nav>
     </header>
-
     <div class="quotes-main">
       <h2>Quotes</h2>
       <div class="quotes-container">
+        <% if (quotes.length === 0) { %>
         <div class="quotes">
-          <span class="quotes-text"
-            >"The only way to do greak work is to love what you do. If you
-            haven't found it yet, keep looking. Don't settle."
-          </span>
-          <span class="quotes-author"> - Alex Turner, The Great Journey </span>
+          <span class="quotes-text">No quotes added yet.</span>
         </div>
+        <% } else { %> <% quotes.forEach(q => { %>
         <div class="quotes">
-          <span class="quotes-text"
-            >"Life is not a problem to be solved,but a reality to be
-            experienced."
-          </span>
-          <span class="quotes-author">
-            - Sophia Bennett, The Art of Living
-          </span>
+          <span class="quotes-text">"<%= q.quote_text %>"</span>
+          <span class="quotes-author">- <%= q.author %></span>
         </div>
-        <div class="quotes">
-          <span class="quotes-text"
-            >"Life is not a problem to be solved,but a reality to be
-            experienced."
-          </span>
-          <span class="quotes-author">
-            - Sophia Bennett, The Art of Living
-          </span>
-        </div>
-        <div class="quotes">
-          <span class="quotes-text"
-            >"Life is not a problem to be solved,but a reality to be
-            experienced."
-          </span>
-          <span class="quotes-author">
-            - Sophia Bennett, The Art of Living
-          </span>
-        </div>
-        <div class="quotes">
-          <span class="quotes-text"
-            >"Life is not a problem to be solved,but a reality to be
-            experienced."
-          </span>
-          <span class="quotes-author">
-            - Sophia Bennett, The Art of Living
-          </span>
-        </div>
+        <% }) %> <% } %>
       </div>
     </div>
   </body>

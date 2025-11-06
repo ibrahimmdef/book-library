@@ -39,10 +39,17 @@ modules.forEach((item) => {
 //Book status
 
 const bookStatus = document.querySelectorAll(".book-status span");
+const statusInput = document.getElementById("bookStatus");
 
 bookStatus.forEach((item) => {
   item.addEventListener("click", () => {
     bookStatus.forEach((el) => el.classList.remove("active"));
     item.classList.add("active");
+
+    if (item.classList.contains("status-read")) {
+      statusInput.value = "finished";
+    } else if (item.classList.contains("status-wish")) {
+      statusInput.value = "want";
+    }
   });
 });

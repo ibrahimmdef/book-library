@@ -52,10 +52,15 @@
           <label for="b-title">Book Cover </label><br />
           <input type="url" name="url" placeholder="Exp : https://1984.jpg" />
           <br />
+          <input type="hidden" name="status" id="bookStatus" value="none" />
 
           <div class="book-status">
-            <span class="status-read">Completed</span>
-            <span class="status-wish">Want to Read</span>
+            <span class="status-read" onclick="setStatus('finished')"
+              >Completed</span
+            >
+            <span class="status-wish" onclick="setStatus('want')"
+              >Want to Read</span
+            >
           </div>
 
           <button class="btn">Add</button>
@@ -65,7 +70,7 @@
           <label for="t-quotes">Quote</label><br />
           <input
             type="text"
-            name="title"
+            name="quotes"
             placeholder="Your quotes"
             required
           /><br />
