@@ -279,19 +279,10 @@ GET /profile        - User profile page
 }
 ```
 
-## 📱 Responsive Design
-
-The application is fully responsive and works on:
-- 💻 Desktop (1200px+)
-- 📱 Tablet (768px - 1199px)
-- 📱 Mobile (320px - 767px)
-
 ## 🎨 Features in Detail
 
 ### Book Collection
 - Add books with cover images
-- Categorize by reading status
-- Quick delete and status update
 - Search and filter capabilities
 
 ### Quote Management
