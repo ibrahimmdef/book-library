@@ -5,13 +5,12 @@ A modern personal library management system that helps you organize your reading
 ## 🌟 Features
 
 - ✅ **User Authentication** - Secure registration and login system with password hashing
-- ✅ **Book Management** - Add, view, and organize your personal book collection
+- ✅ **Book Management** - Add, view, delete and organize your personal book collection
 - ✅ **Reading Status** - Track books as "Want to Read" or "Finished"
 - ✅ **Quote Collection** - Save and organize memorable quotes from your books
 - ✅ **Dashboard** - View statistics about your reading progress
 - ✅ **Book Filtering** - Filter books by reading status (All, Read, Want to Read)
-- ✅ **Profile Management** - Manage your account information
-- ✅ **Responsive Design** - Works seamlessly on desktop and mobile devices
+
 
 ## 🛠️ Technologies Used
 
